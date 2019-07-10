@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--These are all the components used in the game screen including buttons and text views-->
+<!--It uses linear layout to display components next to each other horizontally -->
+<!--It uses table layout to display the key pads in a grid format-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gamebackground">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_rounded"
+        android:textColor="@color/startAndHintButton"
+        android:onClick="Start"
+        android:text="@string/start" />
+    <TextView
+        android:id="@+id/txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/timer_text_size"
+        android:text="@string/time_remaining"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtf_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/timer_text_size"
+        android:text="@string/timer"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/hints"
+            android:text ="@string/hints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded"
+            android:textColor="@color/startAndHintButton"
+            android:onClick="hints"/>
+        <TextView
+            android:id="@+id/hints_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/hints_text_size"
+            android:text="@string/hints_txt"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView
+            android:id="@+id/hints_on_or_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/hints_text_size"
+            android:textColor="@color/hintsOnOff"
+            android:text="@string/hints_off"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/guess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="@string/guess"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/question_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:background="@drawable/question_border"
+            android:text="                        " />
+
+        <TextView
+            android:id="@+id/question_answers"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="@string/missing_Ans"
+            android:background="@drawable/answer_border"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/incorrect_or_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/check_answer_text_size"
+        android:paddingTop="10dp"
+        android:text="@string/good_luck"
+        android:layout_gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtf_endGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Challenge Completed"
+            android:textSize="@dimen/check_answer_text_size"
+            android:textColor="@color/colorPrimary"/>
+        <TextView
+            android:id="@+id/txtf_scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scoring"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/txtf_currentScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="32sp" />
+    </LinearLayout>
+    <TableLayout
+        android:id="@+id/keypad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/keypad_1"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPad1"
+                android:text="@string/key_pad_1">
+
+            </Button>
+
+            <Button
+                android:id="@+id/keypad_2"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPad2"
+                android:text="@string/key_pad_2">
+
+            </Button>
+
+            <Button
+                android:id="@+id/keypad_3"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPad3"
+                android:text="@string/key_pad_3">
+
+            </Button>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/keypad_4"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPad4"
+                android:text="@string/key_pad_4">
+
+            </Button>
+
+            <Button
+                android:id="@+id/keypad_5"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPad5"
+                android:text="@string/key_pad_5">
+
+            </Button>
+
+            <Button
+                android:id="@+id/keypad_6"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPad6"
+                android:text="@string/key_pad_6">
+
+            </Button>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/keypad_7"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPad7"
+                android:text="@string/key_pad_7">
+
+            </Button>
+
+            <Button
+                android:id="@+id/keypad_8"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPad8"
+                android:text="@string/key_pad_8">
+
+            </Button>
+
+            <Button
+                android:id="@+id/keypad_9"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPad9"
+                android:text="@string/key_pad_9">
+
+            </Button>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/key_pad_delete"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPadDelete"
+                android:text="@string/key_pad_delete">
+
+            </Button>
+
+            <Button
+                android:id="@+id/keypad_0"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPad0"
+                android:text="@string/key_pad_0">
+
+            </Button>
+
+            <Button
+                android:id="@+id/hash"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:text="@string/key_pad_hash">
+
+            </Button>
+
+            <Button
+                android:id="@+id/key_pad_minus"
+                android:background="@drawable/button_rounded"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/key_pad_text_size"
+                android:onClick="keyPadMinus"
+                android:text="@string/key_pad_minus">
+
+            </Button>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

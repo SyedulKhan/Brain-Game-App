@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--These are all the strings used in the game screen and main menu -->
+<resources>
+    <string name="app_name">Brain Training Game</string>
+    <string name="long_app_name">Brain Training</string>
+    <string name="continue_label">Continue</string>
+    <string name="new_game_label">New Game</string>
+    <string name="about_label">About</string>
+    <string name="about_title">About the Brain Training Game</string>
+    <string name="exit_label">Exit</string>
+    <string name="ok_label">OK</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="about_text">\
+        Rules of the brain training game: \n
+        Select a level (Novice, Easy, Medium and Guru) and test your mathematical
+        skills through a range of arithmetic calculations.\n\
+        These arithmetic questions include a combination of addition, subtraction,
+        multiplication and division.\n\
+        Answer each questions under ten seconds.\n\
+        Use the hints option to give you more attempts if a question is too hard.\n\
+        Good Luck!
+</string>
+
+    <string name="new_game_title">Difficulty</string>
+    <string name="novice_label">Novice</string>
+    <string name="easy_label">Easy</string>
+    <string name="medium_label">Medium</string>
+    <string name="guru_label">Guru</string>
+
+    <string name="game_title">Game</string>
+    <string name="no_moves_label">No moves</string>
+    <string name="keypad_title">Keypad</string>
+    <string name="scoring">Your final score:</string>
+    <string name="missing_Ans">\???</string>
+    <string name="guess">Guess:</string>
+    <string name="key_pad_1">1</string>
+    <string name="key_pad_2">2</string>
+    <string name="key_pad_3">3</string>
+    <string name="key_pad_4">4</string>
+    <string name="key_pad_5">5</string>
+    <string name="key_pad_6">6</string>
+    <string name="key_pad_7">7</string>
+    <string name="key_pad_8">8</string>
+    <string name="key_pad_9">9</string>
+    <string name="key_pad_delete">del</string>
+    <string name="key_pad_0">0</string>
+    <string name="key_pad_hash">#</string>
+    <string name="key_pad_minus">-</string>
+    <string name="start">Start</string>
+    <string name="time_remaining">Time Remaining:</string>
+    <string name="timer">10</string>
+    <string name="savedScore">Current Score</string>
+    <string name="hints">Hints</string>
+    <string name="hints_txt">Hints are \n</string>
+    <string name="hints_off">OFF</string>
+    <string name="hints_on">ON</string>
+    <string name="good_luck">GOOD LUCK!</string>
+</resources>
